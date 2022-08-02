@@ -2,19 +2,32 @@ import React, { useState, useRef, useEffect} from "react";
 
 import axios from 'axios'
 
-import Logo from './assets/logo.png'
-import trash from './assets/trash.png'
+import burger from '../../assets/burger.png'
+import trash from '../../assets/trash.png'
 
 import { Container, Imagem, H1, ContaineIntens, InputLabel, Input, Button, Orde} from './styles';
-const App = () => {
+const Lista = () => {
 
   const [ orders, setOrders] = useState([])
   const inputName = useRef()
   const inputOrder = useRef()
 
     async function addNewOrde(){
-      const { data: newOrder} = await axios.post("http://localhost:3001/order",{order: inputOrder.current.value, clientName: inputName.current.value})
+
+      const newOrder = {order: inputOrder.current.value, 
+        clientName: inputName.current.value,
+        price: 122,
+      };
+      
+      try {await axios.post("http://localhost:3001/order", {
+        ...newOrder,
+        
+      });
       setOrders([...orders,newOrder] )
+    } catch (error){
+      console.log(error);
+    }
+      
 
     }
 
@@ -33,15 +46,15 @@ const App = () => {
     async function deleteOrder(ordeId){
 
       await axios.delete(`http://localhost:3001/order/${ordeId}`)
+    
       const newOrder = orders.filter(order => order.id !== ordeId)
-
      setOrders(newOrder)
 
     }
 
   return(
     <Container>
-      <Imagem src={Logo}/>
+      <Imagem src={burger}/>
 
       <ContaineIntens>
 
@@ -55,18 +68,19 @@ const App = () => {
 
       <Button onClick={addNewOrde}>Novo Pedido</Button>
       <ul>
-        {orders.map((orde) =>
-        <Orde>
+        {orders.map((orde) => {
+          return (
+        <Orde key={orde?.id}>
           <div>
           <p>{orde.order}</p> 
           <p>{orde.clientName}</p>
           </div>
-          <button onClick={() => deleteOrder(orde.id)}>
+          <button onClick={() => deleteOrder(orde?.id)}>
           <img src={trash}/>
           </button>
-       
         </Orde>
-        )}
+          )
+        })}
       </ul>
       </ContaineIntens>
 
@@ -79,4 +93,4 @@ const App = () => {
 
 
 
-export default App
+export default Lista
