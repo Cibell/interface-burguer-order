@@ -1,4 +1,5 @@
 # :triangular_flag_on_post: Projeto - Interface do Hambúrguer (Cadastro e Pedido)
+<img src="https://github.com/Cibell/interface-burguer-order/blob/master/src/assets/home.png?raw=true"/>
 
 # :speech_balloon: Sobre
 
