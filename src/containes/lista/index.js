@@ -1,35 +1,20 @@
-import React, { useState, useRef, useEffect} from "react";
+import React, { useState, useEffect} from "react";
+import { useHistory } from "react-router-dom";
 
 import axios from 'axios'
 
 import burger from '../../assets/burger.png'
 import trash from '../../assets/trash.png'
 
-import { Container, Imagem, H1, ContaineIntens, InputLabel, Input, Button, Orde} from './styles';
+ import H1 from "../../companents/Title"
+ import Button from "../../companents/Button"
+
+import { Container, Imagem, ContaineIntens, Orde} from './styles';
+
 const Lista = () => {
 
   const [ orders, setOrders] = useState([])
-  const inputName = useRef()
-  const inputOrder = useRef()
-
-    async function addNewOrde(){
-
-      const newOrder = {order: inputOrder.current.value, 
-        clientName: inputName.current.value,
-        price: 122,
-      };
-      
-      try {await axios.post("http://localhost:3001/order", {
-        ...newOrder,
-        
-      });
-      setOrders([...orders,newOrder] )
-    } catch (error){
-      console.log(error);
-    }
-      
-
-    }
+  const history = useHistory()
 
    useEffect(() => {
 
@@ -51,6 +36,9 @@ const Lista = () => {
      setOrders(newOrder)
 
     }
+    function goBackPage(){
+      history.push("/")
+    }
 
   return(
     <Container>
@@ -58,30 +46,26 @@ const Lista = () => {
 
       <ContaineIntens>
 
-      <H1>Faça seu pedido!</H1>
+      <H1>Pedidos</H1>
 
-      <InputLabel>Pedido</InputLabel>
-      <Input ref={inputOrder} placeholder="1 Coca-Cola, 1-X Salada"/>
-
-      <InputLabel>Nome do Cliente</InputLabel>
-      <Input ref={inputName} placeholder="Steve Jobs"/>
-
-      <Button onClick={addNewOrde}>Novo Pedido</Button>
       <ul>
         {orders.map((orde) => {
           return (
-        <Orde key={orde?.id}>
+        <Orde key={orde.id}>
           <div>
           <p>{orde.order}</p> 
           <p>{orde.clientName}</p>
           </div>
-          <button onClick={() => deleteOrder(orde?.id)}>
+          <button onClick={() => deleteOrder(orde.id)}>
           <img src={trash}/>
           </button>
         </Orde>
           )
         })}
       </ul>
+
+      <Button isBack={true} onClick={goBackPage}>Voltar</Button>
+   
       </ContaineIntens>
 
     

@@ -1,11 +1,16 @@
-import React, { useState, useRef, useEffect} from "react";
+import React, { useState, useRef} from "react";
+import { useHistory } from "react-router-dom";
 
 import axios from 'axios'
 
 import Logo from '../../assets/logo.png'
 
-import { Container, Imagem, H1, ContaineIntens, InputLabel, Input, Button} from './styles';
-const App = () => {
+import H1 from "../../companents/Title"
+import Button from "../../companents/Button"
+
+import { Container, Imagem, ContaineIntens, InputLabel, Input} from './styles';
+const Pedidos = () => {
+  const history = useHistory()
 
   const [ orders, setOrders] = useState([])
   const inputName = useRef()
@@ -13,23 +18,24 @@ const App = () => {
 
     async function addNewOrde(){
 
-      const newOrder = {order: inputOrder.current.value, 
+      const newOrder = {
+        order: inputOrder.current.value, 
         clientName: inputName.current.value,
-        price: 122,
       };
       
-      try {await axios.post("http://localhost:3001/order", {
+      try {
+        const {data} = await axios.post("http://localhost:3001/order", {
         ...newOrder,
         
       });
-      setOrders([...orders,newOrder] )
+      setOrders([...orders,data] )
     } catch (error){
       console.log(error);
     }
-      
+    history.push("/Lista")
 
     }
-
+    
   return(
     <Container>
       <Imagem src={Logo}/>
@@ -56,4 +62,4 @@ const App = () => {
 
 
 
-export default App
+export default Pedidos

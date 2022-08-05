@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 
 export const Container = styled.div `
@@ -54,19 +54,4 @@ border: none;
 margin-bottom: 40px;
 `
 
-export const Button = styled.button `
-width: 342px;
-height: 68px;
 
-background: #D93856;
-
-font-style: normal;
-font-weight: 900;
-font-size: 17px;
-line-height: 2px;
-color: #FFFFFF;
-border: none;
-cursor: pointer;
-
-
-`
