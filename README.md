@@ -22,6 +22,7 @@ E utilizei o framework [React](https://pt-br.reactjs.org/).
   [Node.js](https://nodejs.org/en/)
 
 # :pencil: Autor
+<img src="https://github.com/Cibell/interface-burguer-order/blob/master/src/assets/Cibele%20desenvolvedora%20front-end.jpeg?raw=true">
 
 # :closed_book: Licença
 
