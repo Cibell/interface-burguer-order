@@ -7,7 +7,7 @@
 
 ### Pré-requisitos"
 
-Utilizei como ferramenta o [VSCode](https://code.visualstudio.com/) e instalei em meu computador as seguintes tecnologias: [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).<br>
+Utilizei como ferramenta o [VSCode](https://code.visualstudio.com/), instalei as seguintes tecnologias: [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) no computador.<br>
 E utilizei o framework [React](https://pt-br.reactjs.org/).
 
 
