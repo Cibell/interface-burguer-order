@@ -7,5 +7,5 @@ font-size: 28px;
 line-height: 33px;
 color: #FFFFFF;
 text-align: center;
-margin: 20px 0 50px 0;
+margin: 20px 0 15px 0;
 `;

@@ -16,11 +16,7 @@ min-height: 100vh;
 
 `
 export const Imagem = styled.img `
-width: 342px;
-height: 354px;
-
-margin: 11px 0 25px 0;
-`
+margin-top: 25px;`
 export const ContaineIntens = styled.div `
 display: flex;
 flex-direction: column;
@@ -57,7 +53,7 @@ font-weight: 300;
 font-size: 18px;
 line-height: 21px;
 color: #FFFFFF;
-margin-top: 20px;
+margin: 20px 0 40px;
 
 
 display: flex;

@@ -14,9 +14,6 @@ height: 100%;
 
 `
 export const Imagem = styled.img `
-width: 342px;
-height: 354px;
-
 margin: 11px 0 25px 0;
 `
 export const H1 = styled.h1 `
@@ -52,6 +49,7 @@ color: #FFFFFF;
 padding-left: 20px;
 border: none;
 margin-bottom: 40px;
+outline: none;
 `
 
 

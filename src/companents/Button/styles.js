@@ -15,7 +15,8 @@ cursor: pointer;
 display: flex;
 align-items: center;
 justify-content: center;
-margin: 20px 0 50px 0;
+margin: 10px 0 50px 0;
+border-radius: 15px;
 
 
 `
