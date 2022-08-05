@@ -3,10 +3,23 @@
 
 # :speech_balloon: Sobre
 
+É um sistema de registro que tem como opção de cadastrar pedidos, listar todos os pedidos registrado e deletar um pedido específico. 
+
 ### Pré-requisitos"
+
+Utilizei como ferramenta o [VSCode](https://code.visualstudio.com/) e instalei em meu computador as seguintes tecnologias: [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).<br>
+E utilizei o framework [React](https://pt-br.reactjs.org/).
+
+
 
 
 # :computer: Tecnologias
+
+  [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)  
+  [Styled-Components](https://styled-components.com/)  
+  [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/) <br>
+  [React](https://pt-br.reactjs.org/)<br>
+  [Node.js](https://nodejs.org/en/)
 
 # :pencil: Autor
 
