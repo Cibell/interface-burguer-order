@@ -1,9 +1,9 @@
 # :triangular_flag_on_post: Projeto - Interface do Hambúrguer (Cadastro e Pedido)
-<img src="https://github.com/Cibell/interface-burguer-order/blob/master/src/assets/home.png?raw=true"/>
+<img src="https://github.com/Cibell/interface-burguer-order/blob/master/src/assets/home.png?raw=true" width= "300px;" height="470px"/>  <img src="https://github.com/Cibell/interface-burguer-order/blob/master/src/assets/pedido.png?raw=true" width= "300px;" height="470px"/>
 
 # :speech_balloon: Sobre
 
-### Pré-requisitos
+### Pré-requisitos"
 
 
 # :computer: Tecnologias
